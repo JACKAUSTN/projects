@@ -1,0 +1,67 @@
+def bmi_calc():
+  name = input("What is your name?:")
+  weight = float(input("What is your weight?(kilograms):"))
+  height = float(input("What is your height?(meters):"))
+  bmi = float(weight / height ** 2).__round__(2)
+  print(f"Hi {name}, your BMI is {bmi}")
+
+def ticket_sale_calc():
+    numb_of_tickets = int(input("Enter the number of tickets you wish to purchase:"))
+    
+    ticket_cost = numb_of_tickets * 20.00
+    booking_fee_total = 5.00
+    convenience_fee_total = numb_of_tickets * 7.00
+    subtotal = ticket_cost + booking_fee_total + convenience_fee_total
+    
+    tax = subtotal / 10
+    service_charge = subtotal / 20
+    
+    total_cost = subtotal + tax + service_charge
+    
+    print(f"Ticket cost: ${ticket_cost:.2f}")
+    print(f"Booking fee: ${booking_fee_total:.2f}")
+    print(f"Convenience fee: ${convenience_fee_total:.2f}")
+    print(f"Subtotal: ${subtotal:.2f}")
+    print(f"Tax (10%): ${tax:.2f}")
+    print(f"Service charge (5%): ${service_charge:.2f}")
+    print(f"Total amount owed: ${total_cost:.2f}")
+
+def mark_to_grade():
+    marks = int(input("Mark?"))
+    if marks >= 80:
+        print("HD")
+    elif marks >= 70:
+        print("D")
+    elif marks >= 60:
+        print("C")
+    elif marks >= 50:
+        print("D")
+    else:
+        print("F")
+mark_to_grade
+
+def print_numbers_in_order():
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    num3 = float(input("Enter the third number: "))
+    numbers = [num1, num2, num3]
+    numbers.sort()
+    print("Numbers in ascending order:", numbers)
+
+def numb_sorter():
+    num1 = int(input("Number 1?"))
+    num2 = int(input("Number 2?"))
+    num3 = int(input("Number 3?"))
+    if num1 >= num2 and num2 >= num3:
+        print("Result =", num1, num2, num3)
+    elif num1 >= num3 and num3 >= num2:
+        print("Result =", num1, num3, num2)
+    elif num2 >= num1 and num1 >= num3:
+        print("Result =", num2, num1, num3)
+    elif num2 >= num3 and num3 >= num1:
+        print("Result =", num2, num3, num1)
+    elif num3 >= num1 and num1 >= num2:
+        print("Result =", num3, num1, num2)
+    elif num3 >= num2 and num2 >= num1:
+        print("Result =", num3, num2, num1)
+numb_sorter()
