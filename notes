@@ -46,7 +46,9 @@ def print_numbers_in_order():
     num3 = float(input("Enter the third number: "))
     numbers = [num1, num2, num3]
     numbers.sort()
-    print("Numbers in ascending order:", numbers)
+    print("Result = ", numbers)
+
+print_numbers_in_order
 
 def numb_sorter():
     num1 = int(input("Number 1?"))
@@ -64,4 +66,7 @@ def numb_sorter():
         print("Result =", num3, num1, num2)
     elif num3 >= num2 and num2 >= num1:
         print("Result =", num3, num2, num1)
-numb_sorter()
+
+
+
+
