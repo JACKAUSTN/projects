@@ -1,0 +1,29 @@
+# Student Name:Jack Austin
+# Student Number: 1035675
+
+# Add answer below this line
+counter = 1 
+num_list = [] 
+highest = 0
+lowest = 100
+while True:
+    num = int(input(f"Mark #{counter} "))
+    if num > 0:
+        num_list.append(num)
+        counter += 1
+        if num > highest:
+            highest = num
+        if num < lowest:
+            lowest = num
+    else:
+        print(f"Number of marks = {len(num_list)}")
+        print(f"Highest Mark = {highest}")
+        print(f"Lowest Mark = {lowest}")
+        print(f"Average Mark = {sum(num_list) / len(num_list)}")
+        break
+
+    
+
+    
+    
+    
