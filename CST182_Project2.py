@@ -1,3 +1,4 @@
+#functions
 def display_menu():
     print("Contact Book Menu:")
     print("1. Add Contact")
@@ -22,7 +23,7 @@ def add_contact(contact_book):
         print("Contact added successfully!")
     
 def view_contact(contact_book):
-    name = input()
+    name = input("Enter contact name to edit: ")
     if name in contact_book:
         print(f"Name: {name}")
         print(f"Phone: {contact_book[name]['phone']}")
@@ -32,29 +33,23 @@ def view_contact(contact_book):
         print("Contact not found!")
 
 def edit_contact(contact_book):
-    name = input()
+    name = input("Enter contact name to edit: ")
     if name not in contact_book:
         print("Contact not found!")
     elif name in contact_book:
-        phone = input()
-        email = input()
-        address = input()
-        if phone == "":
-            pass
-        elif phone != "":
+        phone = input("Enter new phone number: ")
+        email = input("Enter new email address: ")
+        address = input("Enter new address: ")
+        if phone != "":
             contact_book[name]['phone'] = phone
-        if email == "":
-            pass
-        elif email != "":
+        if email != "":
             contact_book[name]['email'] = email
-        if phone == "":
-            pass
-        elif phone != "":
-            contact_book[name]['phone'] = phone
+        if address != "":
+            contact_book[name]['address'] = address
         print("Contact updated successfully!")
 
 def delete_contact(contact_book):
-    name = input()
+    name = input("Enter name of contact to delete: ")
     if name not in contact_book:
         print("Contact not found!")
     elif name in contact_book:
@@ -71,16 +66,13 @@ def list_all_contacts(contact_book):
             print(f"Email: {details['email']}")
             print(f"Address: {details['address']}")
             print("")
-
-
+            
 def new_func():
     return {}
 
 contact_book = new_func()
-# Contact Book Application
-# This program allows users to manage a contact book with options to add, view, edit, delete, and list contacts.        
-
-
+   
+# Main program loop
 while True:
     display_menu()
     menu_choice = int(input("Enter your choice: "))
