@@ -38,7 +38,6 @@ def mark_to_grade():
         print("D")
     else:
         print("F")
-mark_to_grade
 
 def print_numbers_in_order():
     num1 = float(input("Enter the first number: "))
@@ -48,7 +47,6 @@ def print_numbers_in_order():
     numbers.sort()
     print("Result = ", numbers)
 
-print_numbers_in_order
 
 def numb_sorter():
     num1 = int(input("Number 1?"))
@@ -66,3 +64,17 @@ def numb_sorter():
         print("Result =", num3, num1, num2)
     elif num3 >= num2 and num2 >= num1:
         print("Result =", num3, num2, num1)
+
+def string_sorter():
+    input_str = input("Enter String: ")
+    vowels = 0
+    consonants = 0
+    for i in input_str:
+        ch = i.lower()
+        if ch == "a" or ch == "e" or ch == "i" or ch == "o" or ch == "u":
+            vowels += 1
+        elif ch in "bcdfghjklmnpqrstvwxyz":
+            consonants += 1
+    print(f"Vowels: {vowels}")
+    print(f"Consonants: {consonants}")
+
